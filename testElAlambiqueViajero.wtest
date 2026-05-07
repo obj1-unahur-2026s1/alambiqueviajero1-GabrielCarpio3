@@ -1,0 +1,20 @@
+import elAlambiqueViajero.*
+
+
+test "Luke guarda el ultimo recuerdo" {
+
+  luke.viajarA(paris)
+  luke.viajarA(buenosAires)
+
+  assert.equals(mate, luke.ultimoRecuerdo())
+}
+test "Luke cuenta correctamente los viajes" {
+
+  luke.resetear()
+
+  luke.viajarA(buenosAires)
+  luke.cambiarVehiculo(superChatarra)
+  luke.viajarA(paris)
+
+  assert.equals(2, luke.cantidadDeLugaresVisitados())
+}
